@@ -20,7 +20,7 @@ import ContactInformation from "../../components/form-components/contact-field";
 import ExamResultField from "../../components/form-components/exam-field";
 import AvatarUpload from "../../components/avatar-upload";
 
-export default function AddStudent() {
+export default function AddTeacher() {
   const [state, setState] = useState({
     gender: "M",
     dob: null,
@@ -158,19 +158,16 @@ export default function AddStudent() {
         </FormControl>
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
-        <TextField fullWidth variant="outlined" label="Institution name" />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <TextField fullWidth variant="outlined" label="Class" />
-      </Grid>
-      <Grid item xs={12} sm={6} md={4}>
-        <TextField fullWidth variant="outlined" label="Class Roll" />
+        <TextField fullWidth variant="outlined" label="Salary" />
       </Grid>
       <Grid item xs={12}>
         <AddressField title="Present Address" />
       </Grid>
       <Grid item xs={12}>
         <AddressField title="Permanent Address" />
+      </Grid>
+      <Grid item xs={12}>
+        <ExamResultField title="Current Institution Information" />
       </Grid>
       <Grid item xs={12}>
         <ExamResultField title="JSC Exam Information" />
