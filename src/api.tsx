@@ -163,6 +163,13 @@ export const API = {
       get("/get-all-studentBatch-by-batch-id/" + batchId),
     getClassTimes: (batchId: number) =>
       get("/get-all-classTime-by-batchId/" + batchId),
+    getStudentBatchesByProgramStudent: (programId: number, studentId: number) =>
+      get(
+        "/get-all-studentBatch-by-program-id-student-id/" +
+          programId +
+          "/" +
+          studentId
+      ),
   },
   classTime: {
     add: (classTime: ClassTime) => postBody("/add-classTime", classTime),
@@ -182,5 +189,8 @@ export const API = {
     update: (expense: Expense) => put("/update-expense", expense),
     filterMonthYear: (month: string, year: number) =>
       get("/get-expense-by-coaching-id-month-year/" + month + "/" + year),
+  },
+  csvImport: {
+    students: (formData: FormData) => post("/import-students", formData),
   },
 };
